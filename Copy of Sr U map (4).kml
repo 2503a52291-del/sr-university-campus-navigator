@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Copy of Sr U map</name>
+    <description/>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>temple</name>
+        <description>temple</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4695447,18.0928452,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Point 2</name>
+        <description>parking</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4690358,18.090796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>srix</name>
+        <description>srix</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4681828,18.0899649,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ground</name>
+        <description>ground</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4712678,18.0874853,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>boys hostel</name>
+        <description>boys hostel</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4685534,18.0871284,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>rock garden</name>
+        <description>rock garden</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4675758,18.0885144,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>amphi</name>
+        <description>amphi</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.468316,18.0888969,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>block 3</name>
+        <description>block 3</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4706738,18.0880656,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>girls hostel</name>
+        <description>girls hostel</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4696653,18.0870941,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>main block 1</name>
+        <description>main block 1</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4673723,18.0892295,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>canteen</name>
+        <description>canteen </description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4680429,18.0895507,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[sports & clubs]]></name>
+        <description><![CDATA[sports& clubs ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4662792,18.0891229,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>central library</name>
+        <description>central library</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4688789,18.0896077,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>block2</name>
+        <description>block 2</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4687876,18.088881,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>school of agriculture</name>
+        <description>school of agriculture</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4737634,18.0913718,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SR Innovation Exchnage</name>
+        <description>SR Innovation Exchnage</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.471446,18.0923261,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>store3</name>
+        <description>store 3</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4709941,18.0883219,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Store2</name>
+        <description>store 2</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.469417,18.0882658,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>store</name>
+        <description>store</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4673253,18.0886871,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[gym']]></name>
+        <description>gym</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4666011,18.088891,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>mess</name>
+        <description>mess</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4673737,18.0867825,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>block 11</name>
+        <description>block 11</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.466903,18.090533,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>block 10</name>
+        <description>block 10</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4664309,18.0910837,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>anathasethu</name>
+        <description>anathasethu</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4662753,18.0895794,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>back gate</name>
+        <description>back gate</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4652561,18.0893601,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>block 8</name>
+        <description>block 8</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            79.4664309,18.0901352,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Untitled layer</name>
+    </Folder>
+  </Document>
+</kml>

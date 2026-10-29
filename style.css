@@ -1,0 +1,838 @@
+/* ==================================================
+   SR UNIVERSITY CAMPUS NAVIGATOR
+   File: style.css
+   ================================================== */
+
+:root {
+    --green: #176b4a;
+    --green-dark: #105239;
+    --green-light: #e8f4ed;
+    --background: #f5f8f6;
+    --white: #ffffff;
+    --text: #24332b;
+    --muted: #68766e;
+    --border: #dce5df;
+    --red: #e34b4b;
+    --shadow: 0 5px 20px rgba(25, 70, 48, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a,
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ==================================================
+   NAVIGATION
+   ================================================== */
+
+.navbar {
+    min-height: 72px;
+    padding: 12px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.brand {
+    color: var(--green);
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar nav a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.navbar nav a:hover {
+    color: var(--green);
+}
+
+.menu-toggle {
+    display: none;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: white;
+    color: var(--green);
+    font-size: 22px;
+}
+
+
+/* ==================================================
+   HERO SECTION
+   ================================================== */
+
+.hero {
+    min-height: 390px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        110deg,
+        #e5f3e9,
+        #f6fbf7
+    );
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: #d4eadb;
+    color: var(--green-dark);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    margin: 18px 0;
+    color: var(--green-dark);
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+}
+
+.hero p {
+    max-width: 620px;
+    color: #506359;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* ==================================================
+   BUTTONS
+   ================================================== */
+
+.primary-button,
+.secondary-button,
+.clear-button,
+.swap-button {
+    min-height: 44px;
+    padding: 11px 19px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+}
+
+.primary-button {
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--green-dark);
+}
+
+.secondary-button {
+    border: 1px solid var(--green);
+    background: white;
+    color: var(--green);
+}
+
+.secondary-button:hover {
+    background: var(--green-light);
+}
+
+.clear-button {
+    border: 1px solid var(--border);
+    background: white;
+    color: #59665e;
+}
+
+.clear-button:hover {
+    background: #f1f4f2;
+    border-color: #b9c9bf;
+}
+
+.swap-button {
+    border: 1px solid var(--border);
+    background: #f5f8f6;
+    color: var(--green);
+}
+
+.swap-button:hover {
+    background: var(--green-light);
+    border-color: var(--green);
+}
+
+.full-button {
+    width: 100%;
+}
+
+
+/* ==================================================
+   GENERAL SECTIONS
+   ================================================== */
+
+.section {
+    padding: 55px 6%;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    margin: 0 0 8px;
+    color: var(--green);
+    font-size: 28px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.places-section {
+    background: var(--background);
+}
+
+
+/* ==================================================
+   CAMPUS MAP
+   ================================================== */
+
+#map,
+#campusMap {
+    display: block;
+    width: 100%;
+    height: 500px;
+    min-height: 400px;
+    background: #eeeae3;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.map-legend {
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.map-disclaimer {
+    width: 100%;
+    background: #fff8e1;
+    border-left: 4px solid #e6a700;
+    padding: 12px 16px;
+    margin: 15px 0;
+    border-radius: 6px;
+    color: #594500;
+    line-height: 1.6;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.leaflet-container {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eeeae3;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 9px;
+}
+
+.leaflet-popup-content {
+    font-size: 14px;
+}
+
+.choose-place-button {
+    min-height: 38px;
+    margin-top: 8px;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--green);
+    color: white;
+}
+
+.choose-place-button:hover {
+    background: var(--green-dark);
+}
+
+
+/* ==================================================
+   CAMPUS PLACE CARDS
+   No hover effect on place cards
+   ================================================== */
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.place-card {
+    min-height: 115px;
+    padding: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: white;
+    color: var(--text);
+    text-align: center;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.025);
+
+    /* Keep the card visually stable on hover */
+    transition: none;
+}
+
+.place-card:hover {
+    border-color: var(--border);
+    background: white;
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.025);
+}
+
+.place-icon {
+    font-size: 29px;
+}
+
+
+/* ==================================================
+   PLACE DETAILS PANEL
+   Displayed after selecting a place card
+   ================================================== */
+
+.place-details {
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--green);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow-wrap: anywhere;
+}
+
+.place-details h3 {
+    margin: 0 0 10px;
+    color: var(--green);
+    font-size: 23px;
+}
+
+.place-details p {
+    margin: 8px 0;
+    color: var(--muted);
+}
+
+.place-details .place-detail-label {
+    color: var(--text);
+    font-weight: bold;
+}
+
+.place-details .place-detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.place-details .place-detail-actions button {
+    min-height: 44px;
+}
+
+
+/* ==================================================
+   SEARCH SECTION
+   ================================================== */
+
+.search-form {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px 12px;
+    border: 1px solid #cbd8cf;
+    border-radius: 8px;
+    background: white;
+    color: var(--text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(23, 107, 74, 0.22);
+    outline-offset: 2px;
+}
+
+.result-message {
+    margin-top: 15px;
+    color: var(--green);
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   DIRECTIONS SECTION
+   ================================================== */
+
+.directions-section {
+    background: #f7faf8;
+}
+
+.route-card {
+    width: 100%;
+    max-width: 750px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    display: block;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.route-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.route-summary {
+    margin-top: 18px;
+    color: var(--green);
+    font-size: 18px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.route-summary p {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.direction-details {
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 8px;
+    background: var(--green-light);
+}
+
+.direction-details p {
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+}
+
+.direction-details li {
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.route-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.route-option-button {
+    width: 100%;
+    min-height: 95px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    color: var(--text);
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.route-option-button:hover {
+    border-color: var(--green);
+    background: #f5faf6;
+}
+
+.route-option-button.selected {
+    border: 2px solid var(--green);
+    background: var(--green-light);
+}
+
+.route-note {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: normal;
+}
+
+
+/* ==================================================
+   ADMIN SECTION - IF USED
+   ================================================== */
+
+.admin-section {
+    background: white;
+}
+
+.admin-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fbfdfb;
+}
+
+.admin-form .small-text {
+    margin-top: 15px;
+}
+
+.message {
+    min-height: 24px;
+    overflow-wrap: anywhere;
+}
+
+.small-text {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.footer {
+    padding: 28px 6%;
+    background: #123e2c;
+    color: white;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer p + p {
+    color: #cfe0d5;
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   RESPONSIVE LAYOUT - TABLETS
+   ================================================== */
+
+@media (max-width: 1100px) {
+    .navbar {
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .places-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVE LAYOUT - SMALL TABLETS
+   ================================================== */
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .navbar nav.open {
+        display: flex;
+    }
+
+    .navbar nav a {
+        padding: 12px 5px;
+        border-bottom: 1px solid var(--border);
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 340px;
+        padding: 50px 6%;
+    }
+
+    .section {
+        padding: 42px 5%;
+    }
+
+    #map,
+    #campusMap {
+        height: 420px;
+        min-height: 350px;
+    }
+
+    .places-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .route-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVE LAYOUT - MOBILE
+   ================================================== */
+
+@media (max-width: 480px) {
+    .navbar {
+        gap: 10px;
+    }
+
+    .brand {
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .section {
+        padding: 35px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    #map,
+    #campusMap {
+        height: 350px;
+        min-height: 300px;
+        border-radius: 9px;
+    }
+
+    .map-disclaimer {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+
+    .route-card {
+        padding: 18px;
+    }
+
+    .route-buttons {
+        flex-direction: column;
+    }
+
+    .route-buttons button {
+        width: 100%;
+    }
+
+    .route-summary {
+        font-size: 16px;
+    }
+
+    .places-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .place-card {
+        min-height: 105px;
+        padding: 14px 8px;
+        font-size: 13px;
+    }
+
+    .place-icon {
+        font-size: 25px;
+    }
+
+    .place-details {
+        padding: 18px;
+    }
+
+    .place-details h3 {
+        font-size: 20px;
+    }
+
+    .place-details .place-detail-actions {
+        flex-direction: column;
+    }
+
+    .place-details .place-detail-actions button {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 24px 5%;
+    }
+}
+
+
+/* ==================================================
+   ACCESSIBILITY - REDUCED MOTION
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

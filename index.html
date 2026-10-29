@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SR University Campus Navigator</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#home" class="brand">
+            🎓 SR Campus Navigator
+        </a>
+
+        <button
+            id="menuToggle"
+            class="menu-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#mapSection">Campus Map</a>
+            <a href="#placesSection">Places</a>
+            <a href="#searchSection">Search</a>
+            <a href="#directionsSection">Directions</a>
+        </nav>
+    </header>
+
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+
+            <span class="badge">WELCOME TO SR UNIVERSITY</span>
+
+            <h1>Explore Your Campus Easily</h1>
+
+            <p>
+                Find campus locations, search for buildings,
+                and explore walking routes between places.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#mapSection" class="primary-button">
+                    Explore Map
+                </a>
+
+                <a href="#directionsSection" class="secondary-button">
+                    Find a Route
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CAMPUS MAP -->
+    <section id="mapSection" class="section">
+
+        <div class="section-heading">
+            <h2>Campus Map</h2>
+            <p>Explore campus buildings and important locations.</p>
+        </div>
+
+        <div class="map-disclaimer">
+            <strong>📍 Note:</strong>
+            This campus map was created by our team using manually
+            marked locations. Some locations and walking paths may
+            not be completely accurate. Please use this map as a guide.
+        </div>
+
+        <div class="map-legend">
+            <span>📍 Campus locations</span>
+            <span>🔵 Available routes</span>
+            <span>🔴 Selected route</span>
+        </div>
+
+        <div
+            id="campusMap"
+            role="application"
+            aria-label="SR University campus map"
+        ></div>
+
+    </section>
+
+
+    <!-- CAMPUS PLACES -->
+    <section id="placesSection" class="section places-section">
+
+        <div class="section-heading">
+            <h2>Campus Places</h2>
+            <p>Select a location to view its details and map position.</p>
+        </div>
+
+        <div id="placesGrid" class="places-grid">
+
+            <button class="place-card" data-place="Main Entrance">
+                <span class="place-icon">🚪</span>
+                <span>Main Entrance</span>
+            </button>
+
+            <button class="place-card" data-place="Temple">
+                <span class="place-icon">🛕</span>
+                <span>Temple</span>
+            </button>
+
+            <button class="place-card" data-place="Parking Area">
+                <span class="place-icon">🅿️</span>
+                <span>Parking Area</span>
+            </button>
+
+            <button class="place-card" data-place="Main Block">
+                <span class="place-icon">🏢</span>
+                <span>Main Block</span>
+            </button>
+
+            <button class="place-card" data-place="ECE & Civil Block">
+                <span class="place-icon">🏫</span>
+                <span>ECE & Civil Block</span>
+            </button>
+
+            <button class="place-card" data-place="Block 2">
+                <span class="place-icon">🏢</span>
+                <span>Block 2</span>
+            </button>
+
+            <button class="place-card" data-place="Block 3">
+                <span class="place-icon">🏢</span>
+                <span>Block 3</span>
+            </button>
+
+            <button class="place-card" data-place="Sports & Clubs">
+                <span class="place-icon">⚽</span>
+                <span>Sports & Clubs</span>
+            </button>
+
+            <button class="place-card" data-place="Boys Hostel">
+                <span class="place-icon">🏠</span>
+                <span>Boys Hostel</span>
+            </button>
+
+            <button class="place-card" data-place="Girls Hostel">
+                <span class="place-icon">🏠</span>
+                <span>Girls Hostel</span>
+            </button>
+
+            <button class="place-card" data-place="SRIX">
+                <span class="place-icon">💡</span>
+                <span>SRIX</span>
+            </button>
+
+            <button class="place-card" data-place="CSE Block 8">
+                <span class="place-icon">💻</span>
+                <span>CSE Block 8</span>
+            </button>
+
+            <button class="place-card" data-place="CSE Block 10">
+                <span class="place-icon">💻</span>
+                <span>CSE Block 10</span>
+            </button>
+
+            <button class="place-card" data-place="CSE Block 11">
+                <span class="place-icon">💻</span>
+                <span>CSE Block 11</span>
+            </button>
+
+            <button class="place-card" data-place="Central Library">
+                <span class="place-icon">📚</span>
+                <span>Central Library</span>
+            </button>
+
+            <button class="place-card" data-place="Mess">
+                <span class="place-icon">🍽️</span>
+                <span>Mess</span>
+            </button>
+
+            <button class="place-card" data-place="Rock Garden">
+                <span class="place-icon">🌳</span>
+                <span>Rock Garden</span>
+            </button>
+
+            <button class="place-card" data-place="Ananthasethu">
+                <span class="place-icon">🌉</span>
+                <span>Ananthasethu</span>
+            </button>
+
+            <button class="place-card" data-place="Circle">
+                <span class="place-icon">🔵</span>
+                <span>Circle</span>
+            </button>
+
+            <button class="place-card" data-place="Amphi">
+                <span class="place-icon">🎭</span>
+                <span>Amphi</span>
+            </button>
+
+            <button class="place-card" data-place="Back Gate">
+                <span class="place-icon">🚪</span>
+                <span>Back Gate</span>
+            </button>
+
+            <button class="place-card" data-place="Canteen">
+                <span class="place-icon">🥤</span>
+                <span>Canteen</span>
+            </button>
+
+            <button class="place-card" data-place="Ground">
+                <span class="place-icon">🏟️</span>
+                <span>Ground</span>
+            </button>
+
+            <button class="place-card" data-place="School of Agriculture">
+                <span class="place-icon">🌱</span>
+                <span>School of Agriculture</span>
+            </button>
+
+            <button class="place-card" data-place="Vepavanam">
+                <span class="place-icon">🌿</span>
+                <span>Vepavanam</span>
+            </button>
+
+            <button class="place-card" data-place="Store">
+                <span class="place-icon">🏪</span>
+                <span>Store</span>
+            </button>
+
+            <button class="place-card" data-place="Store 2">
+                <span class="place-icon">🏪</span>
+                <span>Store 2</span>
+            </button>
+
+            <button class="place-card" data-place="Store 3">
+                <span class="place-icon">🏪</span>
+                <span>Store 3</span>
+            </button>
+
+            <button class="place-card" data-place="Gym">
+                <span class="place-icon">🏋️</span>
+                <span>Gym</span>
+            </button>
+
+        </div>
+
+        <!-- Selected Place Details -->
+        <div
+            id="placeDetails"
+            class="place-details"
+            hidden
+            aria-live="polite"
+        ></div>
+
+    </section>
+
+
+    <!-- SEARCH -->
+    <section id="searchSection" class="section">
+
+        <div class="section-heading">
+            <h2>Search Campus Places</h2>
+            <p>Enter a building or location name.</p>
+        </div>
+
+        <form id="searchForm" class="search-form">
+
+            <input
+                type="text"
+                id="placeInput"
+                placeholder="Example: Central Library"
+                aria-label="Search campus places"
+                autocomplete="off"
+            >
+
+            <button type="submit" class="primary-button">
+                🔍 Search
+            </button>
+
+        </form>
+
+        <p
+            id="searchResult"
+            class="result-message"
+            aria-live="polite"
+        ></p>
+
+    </section>
+
+
+    <!-- DIRECTIONS -->
+    <section id="directionsSection" class="section directions-section">
+
+        <div class="section-heading">
+            <h2>Find Walking Directions</h2>
+            <p>
+                Select your starting location and destination
+                to see available walking routes.
+            </p>
+        </div>
+
+        <div class="route-card">
+
+            <div class="form-group">
+                <label for="routeStart">Starting Location</label>
+
+                <select id="routeStart">
+                    <option value="">Select your starting location</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="routeDestination">Destination</label>
+
+                <select id="routeDestination">
+                    <option value="">Select your destination</option>
+                </select>
+            </div>
+
+            <div class="route-buttons">
+
+                <button
+                    type="button"
+                    id="findRouteButton"
+                    class="primary-button"
+                >
+                    🧭 Find Routes
+                </button>
+
+                <button
+                    type="button"
+                    id="swapRouteButton"
+                    class="secondary-button swap-button"
+                >
+                    🔄 Swap
+                </button>
+
+                <button
+                    type="button"
+                    id="clearRouteButton"
+                    class="clear-button"
+                >
+                    ✖ Clear Route
+                </button>
+
+            </div>
+
+            <p
+                id="routeStatus"
+                class="result-message"
+                aria-live="polite"
+            ></p>
+
+            <div id="routeSummary" class="route-summary"></div>
+
+            <div id="directionDetails" class="direction-details"></div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 SR University Campus Navigator</p>
+        <p>Explore your campus with ease.</p>
+    </footer>
+
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Project JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
